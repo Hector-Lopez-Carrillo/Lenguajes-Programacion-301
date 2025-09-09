@@ -1,0 +1,30 @@
+program TableroAjedrez;
+
+uses crt;
+
+const
+  FILAS = 8;
+  COLUMNAS = 8;
+
+var
+  fila, columna: integer;
+
+begin
+  clrscr;
+  writeln('Tablero de Ajedrez:');
+  writeln;
+
+  for fila := 1 to FILAS do
+  begin
+    for columna := 1 to COLUMNAS do
+    begin
+      if ((fila + columna) mod 2 = 0) then
+        write('██')   {Casilla negra}
+      else
+        write('  ');  {Casilla blanca}
+    end;
+    writeln;
+  end;
+
+  readln;
+end.
